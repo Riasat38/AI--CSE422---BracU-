@@ -91,9 +91,7 @@ if __name__ == '__main__':
     
     try:
         path,distance = aStar(start,end,graph,heuristic)
-        print("Path:",path[0],end="")
-        for i in path[1:]:
-            print("->"+i,end="")
+        print(*path,sep="-->")
         print(f"\nDistance: {distance} km")
     except:
         print("Path not found")
